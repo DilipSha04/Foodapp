@@ -33,7 +33,7 @@ const ResturantMenu = () => {
 
   return (
     <div className="resMenu w-full px-8 py-4 flex justify-center">
-      <div className=" w-6/12 Menu mt-4 my-2">
+      <div className=" md:w-6/12 w-full Menu mt-4 my-2">
         <div className="flex justify-between border-b-2">
           <div className="text-left my-4 ">
             <h1 className="text-[22px] font-bold text-stone-900">{name}</h1>

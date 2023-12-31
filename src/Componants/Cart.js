@@ -17,9 +17,9 @@ const Cart = () =>{
 
     const cartItems = useSelector((store)=> store.cart.items);
     return (
-        <div className="flex flex-col justify-center items-center px-10">
+        <div className="flex flex-col justify-center items-center md:px-10 px-2">
             <h1 className="text-center text-[24px] font-bold mt-6 ">Cart</h1>
-            <div className="flex flex-col justify-center w-6/12">
+            <div className="flex flex-col justify-center md:w-6/12 w-full">
                 <div className="flex justify-center space-x-4">
                 <button onClick={handleClearCart} className="border border-orange-800  font-semibold px-2 text-orange-900 rounded-md hover:bg-orange-800 hover:text-orange-200">Clear Cart</button>
                 <button onClick={handleRemoveItem} className="border border-orange-800 font-semibold px-2 text-orange-900 rounded-md hover:bg-orange-800 hover:text-orange-200">Remove Item</button>
