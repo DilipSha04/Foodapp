@@ -51,7 +51,7 @@ const Body = () => {
       </h1>
     );
 
-  return listOFResturant.length == 0 ? (
+  return listOFResturant.length === 0 ? (
     <Shimmer />
   ) : (
     <div className="main-container w-full px-8 py-4">
