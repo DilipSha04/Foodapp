@@ -49,7 +49,7 @@ const Header = () => {
       </div>
       {/* mobile menu panel */}
       {isMenuOpen && (
-        <div className="md:hidden flex absolute w-5/12 px-4 right-0 top-24 bg-orange-200 z-50 h-[50%] rounded-lg">
+        <div className="md:hidden flex absolute w-6/12 px-4 right-0 top-24 bg-orange-200 z-50 h-[50%] rounded-lg">
           <div className="nav-link flex flex-col py-4 px-2">
             <ul className="flex flex-col justify-center space-y-4 text-[20px]">
               <li className="group ">
