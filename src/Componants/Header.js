@@ -1,5 +1,5 @@
 import { useContext, useState } from "react";
-import logo from "../../images/newlogo.png";
+import logo from "../../images/bigbite.png";
 import hamburger from "../../images/hamburger.png";
 import cart from "../../images/cart.png";
 import { Link } from "react-router-dom";
