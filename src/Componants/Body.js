@@ -27,15 +27,15 @@ const Body = () => {
     const json = await data.json();
     // console.log(json)
     console.log(
-      json?.data?.cards[2].card?.card?.gridElements?.infoWithStyle?.restaurants
+      json?.data?.cards[4].card?.card?.gridElements?.infoWithStyle?.restaurants
     );
     // optional-chaing
     
     setListOFResturant(
-      json?.data?.cards[2]?.card?.card?.gridElements?.infoWithStyle?.restaurants
+      json?.data?.cards[4]?.card?.card?.gridElements?.infoWithStyle?.restaurants
     );
     setFilterdResturant(
-      json?.data?.cards[2]?.card?.card?.gridElements?.infoWithStyle?.restaurants
+      json?.data?.cards[4]?.card?.card?.gridElements?.infoWithStyle?.restaurants
     );
     // console.log(
     //   json?.data?.cards[4]?.card?.card?.gridElements?.infoWithStyle?.restaurants
@@ -82,12 +82,25 @@ const Body = () => {
             className="filter-btn bg-orange-900 px-4 py-1 rounded-md text-orange-200 mx-4 hover:text-orange-300 transition-all duration-200"
             onClick={() => {
               filterdList = listOFResturant.filter(
-                (res) => res.info.avgRating > 4
+                (res) => res?.info?.avgRating > 4
               );
-              setListOFResturant(filterdList);
+              console.log(filterdList)
+              setFilterdResturant(filterdList);
             }}
           >
-            Find Top Rated
+            Top Rated
+          </button>
+          <button
+            className="filter-btn bg-orange-900 px-4 py-1 rounded-md text-orange-200 mx-4 hover:text-orange-300 transition-all duration-200"
+            onClick={() => {
+              filterdList = listOFResturant.filter(
+                (res) => res?.info?.veg === true
+              );
+              console.log(filterdList)
+              setFilterdResturant(filterdList);
+            }}
+          >
+            Veg
           </button>
           <label
             className="text-orange-900 leading-8 text-[20px] mx-2"

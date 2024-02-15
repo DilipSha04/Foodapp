@@ -13,9 +13,9 @@ const Cart = () =>{
     const handleRemoveItem = () => {
         dispatch(removeItem())
     }
-    console.log(handleRemoveItem)
 
     const cartItems = useSelector((store)=> store.cart.items);
+
     return (
         <div className="flex flex-col justify-center items-center md:px-10 px-2">
             <h1 className="text-center text-[24px] font-bold mt-6 ">Cart</h1>
