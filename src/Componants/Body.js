@@ -6,7 +6,9 @@ import useOnlineStatus from "../utils/useOnlineStatus";
 import userContext from "../utils/userContext";
 import { SWIGGY_API } from "../utils/constants";
 
+
 const Body = () => {
+
   const [listOFResturant, setListOFResturant] = useState([]);
 
   const [filterdResturant, setFilterdResturant] = useState([]);
@@ -29,6 +31,7 @@ const Body = () => {
     console.log(
       json?.data?.cards[4].card?.card?.gridElements?.infoWithStyle?.restaurants
     );
+    
     // optional-chaing
     
     setListOFResturant(
@@ -37,6 +40,7 @@ const Body = () => {
     setFilterdResturant(
       json?.data?.cards[4]?.card?.card?.gridElements?.infoWithStyle?.restaurants
     );
+    // setPoster(json?.data?.cards[0]?.card?.card?.imageGridCards?.info)
     // console.log(
     //   json?.data?.cards[4]?.card?.card?.gridElements?.infoWithStyle?.restaurants
     // );
@@ -54,7 +58,9 @@ const Body = () => {
   return listOFResturant.length === 0 ? (
     <Shimmer />
   ) : (
-    <div className="main-container w-full px-8 py-4">
+
+    <div>
+      <div className="main-container w-full px-8 py-4">
       <div className="md:mx-auto mx-2 w-full">
         <div className="filter lg:flex md:flex py-2 w-100% justify-center max-w-[1080px] hidden">
           <input
@@ -132,6 +138,7 @@ const Body = () => {
           ))}
         </div>
       </div>
+    </div>
     </div>
   );
 };
